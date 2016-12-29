@@ -1,0 +1,19 @@
+PODS:
+  - KissXML (5.0.3):
+    - KissXML/Standard (= 5.0.3)
+  - KissXML/Core (5.0.3)
+  - KissXML/Standard (5.0.3):
+    - KissXML/Core
+  - LastFm (1.17.0):
+    - KissXML (~> 5.0.3)
+
+DEPENDENCIES:
+  - LastFm (= 1.17.0)
+
+SPEC CHECKSUMS:
+  KissXML: d19dd6dc65e0dc721ba92b3077b8ebdd240f1c1e
+  LastFm: a624fa250bbda5950fccbd068ea7950dcba2da1f
+
+PODFILE CHECKSUM: 3ef3d574921e7387d929fcaee23ea7065d1a818e
+
+COCOAPODS: 1.1.1
