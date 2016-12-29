@@ -9,23 +9,13 @@
 import Foundation
 
 class iTunes {
-    enum PlayerState: String {
-        case playing = "Playing"
-        case paused = "Paused"
-        case stopped = "Stopped"
-    }
-
     private static let playerInfoNotification = NSNotification.Name(rawValue: "com.apple.iTunes.playerInfo")
 
-
-
-    var currentState: PlayerState = .stopped
+    var currentState = "Stopped"
     var currentPlayCount = 0
     var currentTrack: Track? = nil
 
     var onNewTrack: ((Track) -> Void)? = nil
-
-
 
     static let shared = iTunes()
 
@@ -43,6 +33,8 @@ class iTunes {
         guard let track = Track(fromUserinfo: notification.userInfo) else { return }
 
         print("State: \(playerState), Count: \(playCount)")
+
+        // TODO: Make a decision based on playerState and playCount (?) if the title should be passed on to be scrobbled.
 
         self.currentTrack = track
         onNewTrack?(track)
