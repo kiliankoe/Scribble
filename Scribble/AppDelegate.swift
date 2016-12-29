@@ -15,7 +15,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        iTunes.shared.onNewTrack = { track in
+            print(track)
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -24,4 +26,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 }
-

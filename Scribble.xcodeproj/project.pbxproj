@@ -10,6 +10,7 @@
 		398F9CFA1E1576B7002DFDB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398F9CF91E1576B7002DFDB6 /* AppDelegate.swift */; };
 		398F9CFC1E1576B7002DFDB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 398F9CFB1E1576B7002DFDB6 /* Assets.xcassets */; };
 		398F9CFF1E1576B7002DFDB6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398F9CFD1E1576B7002DFDB6 /* MainMenu.xib */; };
+		398F9D071E157800002DFDB6 /* iTunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398F9D061E157800002DFDB6 /* iTunes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		398F9CFB1E1576B7002DFDB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		398F9CFE1E1576B7002DFDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		398F9D001E1576B7002DFDB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		398F9D061E157800002DFDB6 /* iTunes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				398F9CF91E1576B7002DFDB6 /* AppDelegate.swift */,
+				398F9D061E157800002DFDB6 /* iTunes.swift */,
 				398F9CFB1E1576B7002DFDB6 /* Assets.xcassets */,
 				398F9CFD1E1576B7002DFDB6 /* MainMenu.xib */,
 				398F9D001E1576B7002DFDB6 /* Info.plist */,
@@ -131,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				398F9CFA1E1576B7002DFDB6 /* AppDelegate.swift in Sources */,
+				398F9D071E157800002DFDB6 /* iTunes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
