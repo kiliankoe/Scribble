@@ -8,7 +8,7 @@
 
 import Foundation
 
-class iTunes: NSObject {
+class iTunes {
     enum PlayerState: String {
         case playing = "Playing"
         case paused = "Paused"
@@ -29,8 +29,7 @@ class iTunes: NSObject {
 
     static let shared = iTunes()
 
-    private override init() {
-        super.init()
+    private init() {
         DistributedNotificationCenter.default().addObserver(self, selector: #selector(receive), name: iTunes.playerInfoNotification, object: nil)
     }
 
