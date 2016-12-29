@@ -11,6 +11,9 @@
 		398F9CFC1E1576B7002DFDB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 398F9CFB1E1576B7002DFDB6 /* Assets.xcassets */; };
 		398F9CFF1E1576B7002DFDB6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398F9CFD1E1576B7002DFDB6 /* MainMenu.xib */; };
 		398F9D071E157800002DFDB6 /* iTunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398F9D061E157800002DFDB6 /* iTunes.swift */; };
+		398F9D0E1E15CD35002DFDB6 /* LastFM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398F9D0D1E15CD35002DFDB6 /* LastFM.swift */; };
+		398F9D101E15CECF002DFDB6 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398F9D0F1E15CECF002DFDB6 /* Secrets.swift */; };
+		3C4D9790383C81768CD2E00A /* Pods_Scribble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE1ABFE2F1A120C02C15AF1 /* Pods_Scribble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,11 @@
 		398F9CFE1E1576B7002DFDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		398F9D001E1576B7002DFDB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		398F9D061E157800002DFDB6 /* iTunes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunes.swift; sourceTree = "<group>"; };
+		398F9D0D1E15CD35002DFDB6 /* LastFM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastFM.swift; sourceTree = "<group>"; };
+		398F9D0F1E15CECF002DFDB6 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		3FF7CE25FABCB0CF53EFA554 /* Pods-Scribble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scribble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scribble/Pods-Scribble.release.xcconfig"; sourceTree = "<group>"; };
+		4EE1ABFE2F1A120C02C15AF1 /* Pods_Scribble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scribble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F015E1D51EB4E90789986D /* Pods-Scribble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scribble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scribble/Pods-Scribble.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4D9790383C81768CD2E00A /* Pods_Scribble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FFFB30CBCFFAB49B8493CA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93F015E1D51EB4E90789986D /* Pods-Scribble.debug.xcconfig */,
+				3FF7CE25FABCB0CF53EFA554 /* Pods-Scribble.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		398F9CED1E1576B6002DFDB6 = {
 			isa = PBXGroup;
 			children = (
 				398F9CF81E1576B7002DFDB6 /* Scribble */,
 				398F9CF71E1576B7002DFDB6 /* Products */,
+				1FFFB30CBCFFAB49B8493CA9 /* Pods */,
+				F8601AA256749892236304D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,11 +74,21 @@
 			children = (
 				398F9CF91E1576B7002DFDB6 /* AppDelegate.swift */,
 				398F9D061E157800002DFDB6 /* iTunes.swift */,
+				398F9D0D1E15CD35002DFDB6 /* LastFM.swift */,
+				398F9D0F1E15CECF002DFDB6 /* Secrets.swift */,
 				398F9CFB1E1576B7002DFDB6 /* Assets.xcassets */,
 				398F9CFD1E1576B7002DFDB6 /* MainMenu.xib */,
 				398F9D001E1576B7002DFDB6 /* Info.plist */,
 			);
 			path = Scribble;
+			sourceTree = "<group>";
+		};
+		F8601AA256749892236304D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EE1ABFE2F1A120C02C15AF1 /* Pods_Scribble.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 398F9D031E1576B7002DFDB6 /* Build configuration list for PBXNativeTarget "Scribble" */;
 			buildPhases = (
+				A76C265EE2BBA4358244D6DB /* [CP] Check Pods Manifest.lock */,
 				398F9CF21E1576B6002DFDB6 /* Sources */,
 				398F9CF31E1576B6002DFDB6 /* Frameworks */,
 				398F9CF41E1576B6002DFDB6 /* Resources */,
+				B6B7D84A0554A3EFFCD84E5D /* [CP] Embed Pods Frameworks */,
+				0539AF7278CE69C775DFFA35 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,11 +161,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0539AF7278CE69C775DFFA35 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scribble/Pods-Scribble-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A76C265EE2BBA4358244D6DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B6B7D84A0554A3EFFCD84E5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scribble/Pods-Scribble-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		398F9CF21E1576B6002DFDB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				398F9D0E1E15CD35002DFDB6 /* LastFM.swift in Sources */,
+				398F9D101E15CECF002DFDB6 /* Secrets.swift in Sources */,
 				398F9CFA1E1576B7002DFDB6 /* AppDelegate.swift in Sources */,
 				398F9D071E157800002DFDB6 /* iTunes.swift in Sources */,
 			);
@@ -244,6 +327,7 @@
 		};
 		398F9D041E1576B7002DFDB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93F015E1D51EB4E90789986D /* Pods-Scribble.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -258,6 +342,7 @@
 		};
 		398F9D051E1576B7002DFDB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FF7CE25FABCB0CF53EFA554 /* Pods-Scribble.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -289,6 +374,7 @@
 				398F9D051E1576B7002DFDB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

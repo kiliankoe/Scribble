@@ -12,11 +12,12 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-
+    @IBOutlet weak var usernameField: NSTextField!
+    @IBOutlet weak var passwordField: NSSecureTextField!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         iTunes.shared.onNewTrack = { track in
-            print(track)
+
         }
     }
 
@@ -24,5 +25,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
+    @IBAction func loginPressed(_ sender: NSButton) {
+        let lastFM = LastFM(username: usernameField.stringValue, password: passwordField.stringValue)
+    }
 
 }
