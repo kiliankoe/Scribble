@@ -15,7 +15,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var usernameField: NSTextField!
     @IBOutlet weak var passwordField: NSSecureTextField!
 
+    var lastFM: LastFM?
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        if let lastFM = LastFM.loadFromDefaults() {
+            self.lastFM = lastFM
+        } else {
+            window.makeKeyAndOrderFront(self)
+            NSApp.activate(ignoringOtherApps: true)
+        }
+
         iTunes.shared.onNewTrack = { track in
 
         }
@@ -26,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func loginPressed(_ sender: NSButton) {
-        let lastFM = LastFM(username: usernameField.stringValue, password: passwordField.stringValue)
+        self.lastFM = LastFM(username: usernameField.stringValue, password: passwordField.stringValue)
     }
 
 }
