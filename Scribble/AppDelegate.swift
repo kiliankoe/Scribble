@@ -11,6 +11,8 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
+
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var usernameField: NSTextField!
     @IBOutlet weak var passwordField: NSSecureTextField!
@@ -18,6 +20,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var lastFM: LastFM?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let icon = NSImage(named: "statusIcon")
+        icon?.isTemplate = true
+        statusItem.image = icon
+
         if let lastFM = LastFM.loadFromDefaults() {
             self.lastFM = lastFM
         } else {
